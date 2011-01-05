@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Slide Show</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <link href="style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h2>Fan-style slide show using CSS3 transforms</h2>
+    </header>
+
+    <div class="doc">
+      <section id="window">
+        <ul>
+          <li>
+            <article>
+              <img src="slides/1.jpg">
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="slides/2.jpg">
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="slides/3.jpg">
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="slides/4.jpg">
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="slides/5.jpg">
+            </article>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>
+      
+    </footer>
+    <script type="text/javascript" src="http://yui.yahooapis.com/3.2.0/build/yui/yui-min.js"></script>
+    <script type="text/javascript">
+  YUI ().use ("node", function (Y) {
+    var slides = Y.all ("ul li");
+    var counter=1, size = slides.size ();
+    window.slides = slides;
+    var revert = function (node, i) {
+      window.setTimeout (function () {
+        node.removeClass ("show");
+      },150*i)
+    };
+    var intr = window.setInterval (function () {
+      if (counter===size) {
+        for (var i=size-1;i>=1;i-=1) {
+          var node = slides.item (i);
+          revert (node, size-i-1);
+        }
+        counter = 1;
+        return;
+      }
+      slides.item (counter).addClass ("show");
+      counter+=1;
+    }, 3000);
+  });
+    </script>
+  </body>
+</html>
+
