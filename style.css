@@ -1,17 +1,25 @@
 body {
-    Background: #000;
+    Background: black;
     width: 960px;
     margin: auto;
 }
 
 header {
-    padding: 80px 40px;
-    color: white;
+    padding: 40px;
+    color: #666;
+    text-align: center;
+}
+a {
+    color: #A8A565;
+    text-decoration: none;
+}
+a:hover {
+    color: #CFEB00;
 }
 
 h2 {
+    color: white;p
     font-weight: normal;
-    text-align: center;
 }
 
 #window {
@@ -19,7 +27,6 @@ h2 {
     height: 350px;
     position: relative;
     margin: auto;
-    background: #666;
     border: 5px solid #666;
     overflow: hidden;
 }
