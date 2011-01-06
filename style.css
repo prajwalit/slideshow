@@ -53,14 +53,24 @@ li {
     -moz-transform: rotate(-90deg);
     -moz-transform-origin: left bottom;
     -moz-transition: all 0.5s ease-out;
+    -ms-transform: rotate(-90deg);
+    -ms-transform-origin: left bottom;
+    -ms-transition: all 0.5s ease-out;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    transition: all 0.5s ease-out;
 }
 
 li:first-child {
     -webkit-transform: none;
     -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
 }
 	
 li.show {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
 }
