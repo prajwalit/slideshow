@@ -1,5 +1,5 @@
 body {
-    Background: black;
+    background: black;
     width: 960px;
     margin: auto;
 }
@@ -8,6 +8,7 @@ header {
     padding: 40px;
     color: #666;
     text-align: center;
+    display: block;
 }
 a {
     color: #A8A565;
@@ -17,9 +18,15 @@ a:hover {
     color: #CFEB00;
 }
 
-h2 {
-    color: white;p
+h2, p {
+    color: white;
     font-weight: normal;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    margin: 20px;
 }
 
 #window {
@@ -29,6 +36,7 @@ h2 {
     margin: auto;
     border: 5px solid #666;
     overflow: hidden;
+    display: block;
 }
 
 ul {
@@ -42,12 +50,17 @@ li {
     -webkit-transform: rotate(-90deg);
     -webkit-transform-origin: left bottom;
     -webkit-transition: all 0.5s ease-out;
+    -moz-transform: rotate(-90deg);
+    -moz-transform-origin: left bottom;
+    -moz-transition: all 0.5s ease-out;
 }
 
 li:first-child {
     -webkit-transform: none;
+    -moz-transform: none;
 }
 	
 li.show {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
 }
